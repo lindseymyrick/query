@@ -7,6 +7,7 @@ import * as Font from 'expo-font';
 import AppLoading from 'expo-app-loading';
 
 import Header from './components/Header';
+import StartQuizScreen from './screens/StartQuizScreen';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -28,10 +29,13 @@ export default function App() {
       />
     );
   }
+
+  let content = <StartQuizScreen />;
+
   return (
     <SafeAreaView style={styles.screen}>
       <Header title="Query" />
-      {/* {content} */}
+      {content}
     </SafeAreaView>
   );
 }
