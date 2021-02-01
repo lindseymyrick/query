@@ -1,17 +1,52 @@
+// {
+//     "plugins": ["react"],
+//     "settings": {
+//       "react": {
+//         "version": "detect"
+//       }
+//     },
+//     "extends": ["eslint:recommended", "plugin:react/recommended"],
+//     "parser": "babel-eslint",
+//     "env": {
+//       "browser": true
+//     },
+//     "rules": {
+//       "react/prop-types": "off",
+//       "semi": "error"
+//     }
+//   }
+
 {
-    "plugins": ["react"],
-    "settings": {
-      "react": {
-        "version": "detect"
+  "parser": "babel-eslint",
+  "env": {
+      "browser": true,
+      "node": true,
+      "jest": true
+  },
+  "extends": "airbnb",
+  "overrides": [
+      {
+          "files": [
+              "public/*"
+          ],
+          "rules": {
+              "require-jsdoc": "off"
+          }
       }
-    },
-    "extends": ["eslint:recommended", "plugin:react/recommended"],
-    "parser": "babel-eslint",
-    "env": {
-      "browser": true
-    },
-    "rules": {
-      "react/prop-types": "off",
-      "semi": "error"
-    }
+  ],
+  "rules": {
+      "indent": [
+          2, 
+          4
+      ],
+      "react/jsx-indent": [
+          2,
+          4
+      ],
+      "react/jsx-indent-props": [
+          2,
+          4
+      ],
+      "no-underscore-dangle": "off"
   }
+}
