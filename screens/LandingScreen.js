@@ -5,16 +5,16 @@ import {
 } from 'react-native';
 import Header from '../components/Header.js';
 
-const QuizScreen = props => {
+const LandingScreen = props => {
     return (
         <>
             {/* TODO: Conditionally render user name */}
             <Header title="Hi, Lindsey!" />
             <View>
-                <Text> quiz screen </Text>
+                <Text> landing screen </Text>
             </View>
         </>
     );
 };
 
-export default QuizScreen;
+export default LandingScreen;

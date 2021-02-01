@@ -2,12 +2,11 @@
 
 // import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, SafeAreaView} from 'react-native';
+import { StyleSheet, SafeAreaView, Platform, StatusBar} from 'react-native';
 import * as Font from 'expo-font';
-import AppLoading from 'expo-app-loading';
+import AppLoading  from 'expo-app-loading';
+import QueryNavigator from './navigation/QueryNavigator';
 
-import Header from './components/Header';
-import StartQuizScreen from './screens/StartQuizScreen';
 
 const fetchFonts = () => {
   return Font.loadAsync({
@@ -30,21 +29,20 @@ export default function App() {
     );
   }
 
-  let content = <StartQuizScreen />;
 
   return (
-    <SafeAreaView style={styles.screen}>
-      <Header title="Query" />
-      {content}
+    <SafeAreaView style={styles.AndroidSafeArea}>
+      <QueryNavigator />
     </SafeAreaView>
+
   );
 }
 
 const styles = StyleSheet.create({
-  container: {
+  AndroidSafeArea: {
     flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
+    backgroundColor: "white",
+    paddingTop: Platform.OS === "android" ? StatusBar.currentHeight : 0
+  }
 });
+

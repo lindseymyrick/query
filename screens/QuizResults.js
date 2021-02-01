@@ -11,7 +11,7 @@ const QuizScreen = props => {
             {/* TODO: Conditionally render user name */}
             <Header title="Hi, Lindsey!" />
             <View>
-                <Text> quiz screen </Text>
+                <Text> quiz results screen </Text>
             </View>
         </>
     );
