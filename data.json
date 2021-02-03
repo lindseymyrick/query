@@ -1,0 +1,19 @@
+{
+    "questions": {
+      "one": {
+        "text": "What is JSON and its common operations?"
+      },
+      "two": {
+        "text": "How do you compare Object and Map?"
+      },
+      "three": {
+        "text": "What is a pure function?"
+      },
+      "four": {
+        "text": "What is the difference between let and var?"
+      },
+      "five": {
+        "text": "What is a promise?"
+      }
+    }
+  }
