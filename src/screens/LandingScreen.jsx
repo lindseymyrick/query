@@ -3,9 +3,16 @@ import {
     Text,
     View,
 } from 'react-native';
+import { connect } from 'react-redux';
 import Header from '../components/Header.js';
 
-const LandingScreen = props => (
+const LandingScreen = ({ dispatch }) => {
+    useEffect(() => {
+        console.log('!!!!!!!!!!!')
+        dispatch({ type: 'FETCH_QUESTIONS' });
+    })
+
+    return (
     <>
         {/* TODO: Conditionally render user name */}
         <Header title="Hi, Lindsey!" />
@@ -13,6 +20,7 @@ const LandingScreen = props => (
             <Text> landing screen </Text>
         </View>
     </>
-);
+    )
+    };
 
-export default LandingScreen;
+export default connect()(LandingScreen);
