@@ -3,9 +3,8 @@ import Question from '../../models/question';
 
 function* fetchQuestions(action) {
     try {
-        console.log('in saga')
         const response = yield fetch(
-            'https://query-video-default-rtdb.firebaseio.com/questions.json'
+            'https://query-video-default-rtdb.firebaseio.com/javascript_questions.json'
           );
         const resData = yield response.json();
         const questions = [];
@@ -23,9 +22,28 @@ function* fetchQuestions(action) {
     }
 }
 
+function* fetchQuestionCategories(action) {
+    try {
+        console.log('here!!!!')
+        const response = yield fetch(
+            'https://query-video-default-rtdb.firebaseio.com/question_categories.json'
+          );
+        const resData = yield response.json();
+        const questionCategories = [];
+        for (const key in resData){
+            console.log(resData[key].title)
+            questionCategories.push(resData[key])
+        }
+        yield put({ type: 'SET_QUIZ_QUESTION_CATEGORIES', payload: questionCategories});
+    } catch (error) {
+        console.log('error',error)
+    }
+}
+
 
 function* questionsSaga() {
     yield takeLatest('FETCH_QUESTIONS', fetchQuestions);
+    yield takeLatest('FETCH_QUESTION_CATEGORIES', fetchQuestionCategories);
 }
 
 export default questionsSaga;

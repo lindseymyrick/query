@@ -3,7 +3,7 @@ import {
     Text,
     View,
 } from 'react-native';
-import Header from '../components/Header.js';
+import Header from '../components/Header.jsx';
 
 const QuizScreen = props => (
     <>
