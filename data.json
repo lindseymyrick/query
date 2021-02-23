@@ -1,7 +1,7 @@
 {
-    "questions": {
+    "javascript_questions": {
       "one": {
-        "text": "What is JSON and its common operations?"
+        "text": "What is asynchronous programming, and why is it important in JavaScript?"
       },
       "two": {
         "text": "How do you compare Object and Map?"
@@ -14,6 +14,49 @@
       },
       "five": {
         "text": "What is a promise?"
+      }
+    },
+    "behavioral_questions": {
+      "one": {
+        "text": "What is your ideal workplace?"
+      },
+      "two": {
+        "text": "Give me an example of a time you faced a conflict while working on a team. How did you handle that?"
+      },
+      "three": {
+        "text": "Tell me about a time you failed. How did you deal with the situation?"
+      }
+    },
+    "swift_questions": {
+      "one": {
+        "text": "What is an optional and which problem do optionals solve?"
+      },
+      "two": {
+        "text": "Summarize the main differences between a structure and a class"
+      },
+      "three": {
+        "text": "What is a protocol in Swift?"
+      }
+    },
+    "question_categories": {
+      "one": {
+        "title": "Javascript",
+        "image": "https://images.unsplash.com/photo-1518640467707-6811f4a6ab73?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+      },
+      "two": {
+        "title": "Behavioral",
+        "image": "https://images.unsplash.com/photo-1528459584353-5297db1a9c01?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1375&q=80"
+      },
+      "three": {
+        "title": "Swift",
+        "image": "https://images.unsplash.com/photo-1601752943749-7dd8d89f407a?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80"
+      }
+    },
+    "users": {
+      "one": {
+        "first_name": "Lindsey",
+        "last_name": "Myrick", 
+        "number_of_logins": "0"
       }
     }
   }
